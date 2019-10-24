@@ -6,6 +6,7 @@
     <h5 class="card-title">{{post.user}}</h5>
     <p class="card-text">{{post|hashtag_link|safe}}</p>
     <p>({{post.like_users.all.count}})</p>
+    <a href="{% url 'posts:update' post.id %}">수정</a>
     {% if user in post.like_users.all %}
       <a href="{% url 'posts:like' post.id %}" class="btn btn-outline-danger">
         <h3 class="m-0 p-0">♥</h3>
