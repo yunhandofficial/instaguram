@@ -1,0 +1,1 @@
+web: gunicorn instaguram.wsgi --log-file -
